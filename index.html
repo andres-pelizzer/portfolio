@@ -3,82 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ════════════════════════════════════════════
-         SEO META TAGS
-    ════════════════════════════════════════════ -->
     <title>Andres Pelizzer — Web Full Stack Developer · Treviso</title>
     <meta
       name="description"
-      content="Portfolio di Andres Pelizzer, Web Full Stack Developer di Treviso. Studente ITS Web Stack a Mario Volpato Academy. Frontend con HTML/CSS/JS, backend con Node.js, Express e MySQL."
-    />
-    <meta
-      name="keywords"
-      content="web developer, full stack, frontend, backend, Node.js, Express, MySQL, Treviso, ITS, Mario Volpato, portfolio, JavaScript, HTML, CSS"
+      content="Portfolio di Andres Pelizzer, Web Full Stack Developer di Treviso."
     />
     <meta name="author" content="Andres Pelizzer" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://andrespelizzer.com/" />
-
-    <!-- OPEN GRAPH -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://andrespelizzer.com/" />
-    <meta
-      property="og:title"
-      content="Andres Pelizzer — Web Full Stack Developer"
-    />
-    <meta
-      property="og:description"
-      content="Portfolio personale. Frontend & backend, vanilla web stack, dark minimal design."
-    />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- TWITTER CARD -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Andres Pelizzer — Web Full Stack Developer"
-    />
-    <meta
-      name="twitter:description"
-      content="Portfolio personale. Frontend & backend, vanilla web stack."
-    />
-
-    <!-- favicon -->
     <link rel="icon" href="logo.png" type="image/png" />
-    <link rel="apple-touch-icon" href="logo.png" />
-
-    <!-- SCHEMA.ORG -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Andres Pelizzer",
-        "jobTitle": "Web Full Stack Developer",
-        "description": "Studente ITS Web Stack Full Developer alla Mario Volpato Academy.",
-        "url": "https://andrespelizzer.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Treviso",
-          "addressCountry": "IT"
-        },
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "ITS Digital Academy Mario Volpato"
-        },
-        "knowsAbout": [
-          "HTML5",
-          "CSS3",
-          "JavaScript",
-          "Node.js",
-          "Express",
-          "MySQL",
-          "REST API",
-          "Web Development"
-        ]
-      }
-    </script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -87,20 +18,14 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <div class="deco-line"></div>
-
-    <!-- ════════════════════════════════════════════
-         NAV
-    ════════════════════════════════════════════ -->
     <nav>
       <a href="#hero" class="nav-logo" id="navLogo">
         <img src="logo.png" alt="AP" class="nav-logo-img" /> Andres Pelizzer
-        <!-- easter egg tennis — appare al click sul logo -->
-        <span class="nav-tennis-tip" id="tennisTip">
-          Tennis player, code writer, curious mind.
-        </span>
+        <span class="nav-tennis-tip" id="tennisTip"
+          >Tennis player, code writer, curious mind.</span
+        >
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -113,13 +38,6 @@
       </button>
     </nav>
 
-    <!-- ════════════════════════════════════════════
-         MOBILE MENU — overlay fullscreen
-         × è un bottone fluttuante separato, position: fixed.
-         Indipendente dal layout interno — sempre visibile.
-    ════════════════════════════════════════════ -->
-
-    <!-- bottone × fluttuante (FUORI dal menu, position: fixed) -->
     <button
       type="button"
       class="mm-close-floating"
@@ -141,60 +59,51 @@
     </button>
 
     <div class="mobile-menu" id="mobileMenu">
-      <!-- HEADER: solo logo + nome -->
       <header class="mm-header">
         <div class="mm-brand">
-          <img src="logo.png" alt="AP" class="mm-brand-img" />
-          <span class="mm-brand-name">Andres Pelizzer</span>
-        </div>
-      </header>
-
-      <!-- LINKS -->
-      <nav class="mm-links">
-        <a href="#about" class="mm-link">
-          <span class="mm-num">001</span>
-          <span class="mm-name">About</span>
-        </a>
-        <a href="#projects" class="mm-link">
-          <span class="mm-num">002</span>
-          <span class="mm-name">Work</span>
-        </a>
-        <a href="#skills" class="mm-link">
-          <span class="mm-num">003</span>
-          <span class="mm-name">Skills</span>
-        </a>
-        <a href="#contact" class="mm-link">
-          <span class="mm-num">004</span>
-          <span class="mm-name">Contact</span>
-        </a>
-      </nav>
-
-      <!-- FOOTER: status + email + social -->
-      <footer class="mm-footer">
-        <div class="mm-status">
-          <span class="mm-status-dot"></span>
-          <span class="mm-status-text">Open to opportunities</span>
-        </div>
-
-        <div class="mm-contact">
-          <span class="mm-contact-label">Get in touch</span>
-          <a href="mailto:andrespelizzer@gmail.com" class="mm-email"
-            >andrespelizzer@gmail.com</a
+          <img src="logo.png" alt="AP" class="mm-brand-img" /><span
+            class="mm-brand-name"
+            >Andres Pelizzer</span
           >
         </div>
-
+      </header>
+      <nav class="mm-links">
+        <a href="#about" class="mm-link"
+          ><span class="mm-num">001</span><span class="mm-name">About</span></a
+        >
+        <a href="#projects" class="mm-link"
+          ><span class="mm-num">002</span><span class="mm-name">Work</span></a
+        >
+        <a href="#skills" class="mm-link"
+          ><span class="mm-num">003</span><span class="mm-name">Skills</span></a
+        >
+        <a href="#contact" class="mm-link"
+          ><span class="mm-num">004</span
+          ><span class="mm-name">Contact</span></a
+        >
+      </nav>
+      <footer class="mm-footer">
+        <div class="mm-status">
+          <span class="mm-status-dot"></span
+          ><span class="mm-status-text">Open to opportunities</span>
+        </div>
+        <div class="mm-contact">
+          <span class="mm-contact-label">Get in touch</span
+          ><a href="mailto:pelizzerandres@gmail.com" class="mm-email"
+            >pelizzerandres@gmail.com</a
+          >
+        </div>
         <div class="mm-divider"></div>
-
         <div class="mm-social">
           <a
-            href="https://github.com/andrespelizzer-lang"
+            href="https://github.com/andres-pelizzer"
             target="_blank"
             rel="noopener noreferrer"
             class="mm-chip"
             >GitHub</a
           >
           <a
-            href="https://linkedin.com/in/andres-pelizzer"
+            href="https://www.linkedin.com/in/andres-pelizzer-094910406/"
             target="_blank"
             rel="noopener noreferrer"
             class="mm-chip"
@@ -204,16 +113,14 @@
       </footer>
     </div>
 
-    <!-- ════════════════════════════════════════════
-         HERO — sezione 001
-    ════════════════════════════════════════════ -->
     <main>
+      <!-- HERO -->
       <section id="hero" aria-label="Introduction">
         <div class="hero-top-row">
           <span class="hero-index">001 — Introduction</span>
-          <span class="hero-status">
-            <span class="status-dot"></span>Open to opportunities
-          </span>
+          <span class="hero-status"
+            ><span class="status-dot"></span>Open to opportunities</span
+          >
         </div>
         <div class="hero-line"></div>
         <div class="hero-name-block">
@@ -222,85 +129,90 @@
         </div>
         <div class="live-system">
           <div class="sys-item">
-            <span class="sys-label">Status</span>
-            <span class="sys-value">● Online</span>
+            <span class="sys-label">Status</span
+            ><span class="sys-value">● Online</span>
           </div>
           <div class="sys-item">
-            <span class="sys-label">Location</span>
-            <span class="sys-value">Treviso, IT</span>
+            <span class="sys-label"
+              >Location
+              <svg
+                class="loc-icon"
+                viewBox="0 0 24 24"
+                width="10"
+                height="10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                />
+                <circle cx="12" cy="9" r="2.5" /></svg></span
+            ><span class="sys-value">Treviso, IT</span>
           </div>
           <div class="sys-item">
-            <span class="sys-label">Role</span>
-            <span class="sys-value">Full Stack Dev</span>
+            <span class="sys-label">Uptime</span
+            ><span class="sys-value" id="uptime">00:00:00</span>
           </div>
           <div class="sys-item">
-            <span class="sys-label">Uptime</span>
-            <span class="sys-value" id="uptime">00:00:00</span>
-          </div>
-          <div class="sys-item">
-            <span class="sys-label">Stack</span>
-            <span class="sys-value" id="stackCycle">HTML</span>
+            <span class="sys-label">Focus</span
+            ><span class="sys-value sys-cycle" id="focusCycle">Frontend</span>
           </div>
         </div>
         <div class="hero-bottom">
           <div class="hero-meta">
-            <span class="hero-role">Web Full Stack Dev</span>
-            <span class="hero-sep"></span>
-            <span class="hero-location">Treviso, IT</span>
+            <span class="hero-role">ITS Digital Academy</span
+            ><span class="hero-sep"></span
+            ><span class="hero-location">Full Stack path</span>
           </div>
           <div class="hero-cta">
-            <a href="#projects" class="btn">See my work</a>
-            <a href="#contact" class="btn">Get in touch</a>
+            <a href="#projects" class="btn">See my work</a
+            ><a href="#contact" class="btn">Get in touch</a>
           </div>
         </div>
       </section>
 
-      <!-- ════════════════════════════════════════════
-           ABOUT — sezione 002
-      ════════════════════════════════════════════ -->
+      <!-- ABOUT -->
       <section id="about" aria-label="About me">
         <div class="section-header">
           <span class="section-index">002 — About</span>
           <div class="section-line"></div>
         </div>
-
-        <!-- profilo badge — ridisegnato per essere più carino -->
         <div class="about-profile-badge reveal">
-          <span class="profile-dot"></span>
-          <span class="profile-info">19 years old · Treviso, Italy</span>
+          <span class="profile-dot"></span
+          ><span class="profile-info"
+            >Full Stack Student · Intern from June</span
+          >
         </div>
-
-        <!-- citazione -->
         <h2 class="about-quote reveal delay-1">
-          I want to know how things work<br />
-          <span class="quote-accent">— then build them.</span>
+          I want to know how things work<br /><span class="quote-accent"
+            >— then build them.</span
+          >
         </h2>
-
-        <!-- layout: testo a sinistra, spazio foto a destra -->
         <div class="about-content reveal delay-2">
           <div class="about-text">
             <p class="about-para">
-              Hi, I'm Andres. I'm 19, based in Treviso, and I'm in my first year
-              of
-              <span class="key-word">
-                ITS Web Stack Full Developer<span class="tip"
-                  >Two-year program at Mario Volpato Academy covering HTML, CSS,
-                  JavaScript, Node.js, Express, MySQL and hosting. Currently in
-                  the first year.</span
+              Hi, I'm Andres. I'm 19, based in Treviso, and I'm finishing the
+              <span class="key-word"
+                >ITS Web Stack Full Developer<span class="tip"
+                  >Two-year program (2025–2027) at ITS Digital Academy Mario
+                  Volpato in San Donà di Piave. Covering HTML, CSS, JavaScript,
+                  Node.js, Express, MySQL, Docker, and more.</span
                 ></span
-              >.
+              >
+              program.
             </p>
             <p class="about-para">
               I came straight from a
               <span class="key-word"
                 >scientific high school<span class="tip"
-                  >Liceo Scientifico — Scienze Applicate, in San Donà di Piave.
-                  Strong math and physics base, no programming background.</span
+                  >Liceo Scientifico Galileo Galilei — Scienze Applicate, in San
+                  Donà di Piave. Strong math, physics, and science base.</span
                 ></span
               >
-              with no real coding background — just curiosity. I picked ITS over
-              university because I wanted the most direct path to building real
-              things. The part that surprised me most has been the
+              with just curiosity. I picked ITS over university because I wanted
+              the most direct path to building real things. The part that
+              surprised me most has been the
               <span class="key-word"
                 >backend<span class="tip"
                   >Building REST APIs with Node.js and Express, designing MySQL
@@ -314,8 +226,8 @@
               Outside of code, I play
               <span class="key-word"
                 >tennis<span class="tip"
-                  >Following the pro circuit closely — Sinner especially. Drawn
-                  to the analytics side: stats, probabilistic models, game
+                  >Following the pro circuit closely — Medvedev especially.
+                  Drawn to the analytics side: stats, probabilistic models, game
                   theory.</span
                 ></span
               >
@@ -325,453 +237,359 @@
               making it transparent.
             </p>
             <p class="about-para">
-              Starting end of May 2026 I'll be interning at
+              Starting June 2026 I'll be interning at
               <span class="key-word"
                 >MTS Informatica<span class="tip"
-                  >Software company in Treviso area. Working with Angular, .NET,
-                  and .NET MAUI.</span
+                  >IT consulting and software company in Treviso, founded in
+                  2001. They specialize in ERP management software (Business
+                  Cube), visitor management (INTO), and training platforms
+                  (SOCRATE). .NET technology.</span
                 ></span
               >, a software company in Treviso. It's the part of this year I'm
               most looking forward to.
             </p>
           </div>
-
-          <!-- spazio per la foto — sostituisci src con la tua foto -->
           <div class="about-photo">
-            <div class="photo-placeholder">
-              <span class="photo-placeholder-text">Your photo here</span>
-            </div>
+            <img
+              src="andres.jpg"
+              alt="Andres Pelizzer"
+              class="about-photo-img"
+            />
           </div>
         </div>
-
-        <!-- STAT CARDS -->
         <div class="about-stats reveal delay-3">
           <div class="stat-card">
             <div class="stat-card-header">
-              <span class="stat-key">Timeline</span>
-              <span class="stat-toggle">+</span>
+              <span class="stat-key">Timeline</span
+              ><span class="stat-toggle">+</span>
             </div>
-            <span class="stat-val">First year<br />at ITS Academy</span>
+            <span class="stat-val">ITS Digital Academy<br />2025 – 2027</span>
             <div class="stat-detail">
               <div class="stat-detail-inner">
-                <p>Sep 2025 – Jun 2027 · Treviso</p>
+                <p>San Donà di Piave (VE), Italy</p>
                 <p>
-                  Full stack curriculum: HTML, CSS, JS, Node.js, Express, MySQL.
-                  Halfway to internship phase.
+                  Two-year higher education program (EQF Level 5) focused on
+                  full-stack web development: frontend, backend, databases,
+                  DevOps, and team projects.
                 </p>
               </div>
             </div>
           </div>
           <div class="stat-card">
             <div class="stat-card-header">
-              <span class="stat-key">Focus</span>
-              <span class="stat-toggle">+</span>
+              <span class="stat-key">Focus</span
+              ><span class="stat-toggle">+</span>
             </div>
-            <span class="stat-val">Backend &<br />full stack</span>
+            <span class="stat-val">Full Stack<br />Development</span>
             <div class="stat-detail">
               <div class="stat-detail-inner">
-                <p>REST API design · three-layer architecture</p>
-                <p>
-                  Node.js + Express · MySQL schema design · vanilla JS frontend.
-                </p>
+                <p>Frontend: HTML5, CSS3, JavaScript, Vue, responsive design</p>
+                <p>Backend: Node.js, Express, REST APIs, JWT, MySQL</p>
               </div>
             </div>
           </div>
           <div class="stat-card">
             <div class="stat-card-header">
-              <span class="stat-key">Internship</span>
-              <span class="stat-toggle">+</span>
+              <span class="stat-key">Internship</span
+              ><span class="stat-toggle">+</span>
             </div>
-            <span class="stat-val">MTS Informatica<br />May 2026</span>
+            <span class="stat-val">MTS Informatica<br />June 2026</span>
             <div class="stat-detail">
               <div class="stat-detail-inner">
-                <p>Software company · Treviso area</p>
-                <p>Angular, .NET, .NET MAUI. On-site internship.</p>
+                <p>IT consulting &amp; software company · Treviso</p>
+                <p>
+                  Founded 2001. ERP solutions (Business Cube), visitor
+                  management (INTO), training platforms (SOCRATE). .NET stack.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ════════════════════════════════════════════
-           PROJECTS — sezione 003
-           Con carousel immagini nel browser frame
-      ════════════════════════════════════════════ -->
+      <!-- PROJECTS -->
       <section id="projects" aria-label="Projects">
         <div class="section-header">
           <span class="section-index">003 — Projects</span>
           <div class="section-line"></div>
         </div>
 
-        <div class="projects-layout">
-          <div class="projects-frame">
-            <div class="browser">
-              <div class="browser-bar">
-                <div class="browser-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="browser-url" id="browserUrl">
-                  https://diventa.com
-                </div>
+        <div class="projects-list">
+          <article class="proj reveal">
+            <div class="proj-number">01</div>
+            <div class="proj-body">
+              <div class="proj-header">
+                <h3 class="proj-name">Diventa</h3>
+                <span class="proj-date">Feb — Mar 2026</span>
               </div>
-              <div class="browser-viewport">
-                <img
-                  id="projectImage"
-                  src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1280&q=80"
-                  alt="Project screenshot"
-                />
-                <!-- frecce carousel -->
-                <button
-                  class="carousel-arrow carousel-prev"
-                  id="carouselPrev"
-                  aria-label="Previous image"
-                >
-                  ‹
-                </button>
-                <button
-                  class="carousel-arrow carousel-next"
-                  id="carouselNext"
-                  aria-label="Next image"
-                >
-                  ›
-                </button>
-                <div class="carousel-dots" id="carouselDots"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects-content">
-            <!-- PROGETTO 1 — Diventa -->
-            <article
-              class="project"
-              data-images='["https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1280&q=80"]'
-              data-url="https://diventa.com"
-            >
-              <div class="project-image-mobile">
-                <img
-                  src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1280&q=80"
-                  alt="Diventa screenshot"
-                />
-              </div>
-              <span class="project-num">01 / 04</span>
-              <h3 class="project-title">Diventa</h3>
-              <span class="project-year"
-                >Feb — Mar 2026 · Multi-page website</span
-              >
-              <p class="project-desc">
-                Multi-page responsive website built from a Figma design. Layout
-                in pure HTML5 and CSS3 with Flexbox and Grid, fully adaptive
-                across three breakpoints.
+              <p class="proj-type">Multi-page website</p>
+              <p class="proj-desc">
+                Responsive website from a Figma design. Pure HTML5 and CSS3 with
+                Flexbox and Grid, fully adaptive across three breakpoints.
               </p>
-              <ul class="project-stack">
+              <ul class="proj-tags">
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>Flexbox / Grid</li>
                 <li>Responsive</li>
                 <li>Figma</li>
               </ul>
-              <div class="project-links">
-                <a href="#" class="project-link">View live →</a>
-                <a href="#" class="project-link">GitHub →</a>
-              </div>
-            </article>
+              <a
+                href="https://github.com/andres-pelizzer/educational-website"
+                target="_blank"
+                class="proj-github"
+                >GitHub →</a
+              >
+            </div>
+          </article>
 
-            <!-- PROGETTO 2 — Mini JSONPlaceholder -->
-            <article
-              class="project"
-              data-images='["https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1280&q=80"]'
-              data-url="https://github.com/andrespelizzer/mini-jsonplaceholder"
-            >
-              <div class="project-image-mobile">
-                <img
-                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1280&q=80"
-                  alt="Mini JSONPlaceholder API screenshot"
-                />
+          <article class="proj reveal delay-1">
+            <div class="proj-number">02</div>
+            <div class="proj-body">
+              <div class="proj-header">
+                <h3 class="proj-name">Mini JSONPlaceholder</h3>
+                <span class="proj-date">Apr 2026 — ongoing</span>
               </div>
-              <span class="project-num">02 / 04</span>
-              <h3 class="project-title">Mini JSONPlaceholder</h3>
-              <span class="project-year">Apr 2026 — ongoing · REST API</span>
-              <p class="project-desc">
-                Full CRUD REST API built with Node.js and Express. Features
-                Express Router, nested routes, pagination, X-Total-Count
-                headers, and helper functions.
+              <p class="proj-type">REST API</p>
+              <p class="proj-desc">
+                Full CRUD REST API in Node.js and Express. Express Router,
+                nested routes, pagination, X-Total-Count headers.
               </p>
-              <ul class="project-stack">
+              <ul class="proj-tags">
                 <li>Node.js</li>
                 <li>Express</li>
                 <li>REST API</li>
                 <li>MySQL</li>
-                <li>Thunder Client</li>
               </ul>
-              <div class="project-links">
-                <a href="#" class="project-link">GitHub →</a>
-              </div>
-            </article>
+              <a
+                href="https://github.com/andres-pelizzer/mini-jsonplaceholder-full-stack"
+                target="_blank"
+                class="proj-github"
+                >GitHub →</a
+              >
+            </div>
+          </article>
 
-            <!-- PROGETTO 3 — GameHub -->
-            <article
-              class="project"
-              data-images='["https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1280&q=80"]'
-              data-url="https://github.com/andrespelizzer/gamehub"
-            >
-              <div class="project-image-mobile">
-                <img
-                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1280&q=80"
-                  alt="GameHub desktop app screenshot"
-                />
+          <article class="proj reveal delay-2">
+            <div class="proj-number">03</div>
+            <div class="proj-body">
+              <div class="proj-header">
+                <h3 class="proj-name">GameHub</h3>
+                <span class="proj-date">Dec 2025 — ongoing</span>
               </div>
-              <span class="project-num">03 / 04</span>
-              <h3 class="project-title">GameHub</h3>
-              <span class="project-year">Dec 2025 — ongoing · Desktop app</span>
-              <p class="project-desc">
-                Desktop application for e-sports tournament management built in
-                Java with Swing. Layered architecture separating UI, business
-                logic, and data persistence.
+              <p class="proj-type">Desktop app · Group project</p>
+              <p class="proj-desc">
+                E-sports tournament management in Java with Swing. Layered
+                architecture: UI, business logic, and data persistence.
               </p>
-              <ul class="project-stack">
+              <ul class="proj-tags">
                 <li>Java</li>
                 <li>Swing</li>
                 <li>OOP</li>
-                <li>Layered architecture</li>
+                <li>Layered arch.</li>
               </ul>
-              <div class="project-links">
-                <a href="#" class="project-link">GitHub →</a>
-              </div>
-            </article>
-
-            <!-- PROGETTO 4 — Portfolio -->
-            <article
-              class="project"
-              data-images='["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&q=80"]'
-              data-url="https://andrespelizzer.com"
-            >
-              <div class="project-image-mobile">
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&q=80"
-                  alt="Portfolio website screenshot"
-                />
-              </div>
-              <span class="project-num">04 / 04</span>
-              <h3 class="project-title">Portfolio</h3>
-              <span class="project-year"
-                >Mar 2026 — ongoing · Personal site</span
+              <a
+                href="https://github.com/Somma04/GameHub-ITS-MAA"
+                target="_blank"
+                class="proj-github"
+                >GitHub →</a
               >
-              <p class="project-desc">
-                This website. Built from scratch in vanilla HTML, CSS and
-                JavaScript. No frameworks. Custom animations, parallax effects,
-                sticky scroll showcase, and a fully responsive editorial layout.
+            </div>
+          </article>
+
+          <article class="proj reveal delay-3">
+            <div class="proj-number">04</div>
+            <div class="proj-body">
+              <div class="proj-header">
+                <h3 class="proj-name">This Portfolio</h3>
+                <span class="proj-date">Mar 2026 — ongoing</span>
+              </div>
+              <p class="proj-type">Personal site</p>
+              <p class="proj-desc">
+                Built from scratch in vanilla HTML, CSS and JavaScript. No
+                frameworks. Custom animations, parallax, responsive layout.
               </p>
-              <ul class="project-stack">
+              <ul class="proj-tags">
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>JavaScript</li>
                 <li>Animations</li>
-                <li>Responsive</li>
               </ul>
-              <div class="project-links">
-                <a href="#" class="project-link">View live →</a>
-                <a href="#" class="project-link">GitHub →</a>
-              </div>
-            </article>
-          </div>
+              <a
+                href="https://github.com/andres-pelizzer/portfolio"
+                target="_blank"
+                class="proj-github"
+                >GitHub →</a
+              >
+            </div>
+          </article>
         </div>
       </section>
 
-      <!-- ════════════════════════════════════════════
-           SKILLS — sezione 004
-           Ridisegnata: niente terminale, niente $.
-           Card per categoria con chip skill.
-      ════════════════════════════════════════════ -->
+      <!-- SKILLS -->
       <section id="skills" aria-label="Skills">
         <div class="section-header">
           <span class="section-index">004 — Skills</span>
           <div class="section-line"></div>
         </div>
-
         <h2 class="skills-heading reveal">What I work with</h2>
-
         <div class="skills-grid reveal delay-1">
-          <!-- Frontend -->
           <div class="skill-card">
             <div class="skill-card-header">
-              <span class="skill-card-num">01</span>
-              <span class="skill-card-title">Frontend</span>
+              <span class="skill-card-num">01</span
+              ><span class="skill-card-title">Frontend</span>
             </div>
             <p class="skill-card-desc">
               DOM manipulation · async/await · fetch API · keyframe animations
             </p>
             <div class="skill-card-chips">
-              <span class="skill-chip">HTML5</span>
-              <span class="skill-chip">CSS3</span>
-              <span class="skill-chip">JavaScript</span>
-              <span class="skill-chip">Vue</span>
-              <span class="skill-chip">Responsive</span>
-              <span class="skill-chip">Flexbox</span>
-              <span class="skill-chip">Grid</span>
+              <span class="skill-chip">HTML5</span
+              ><span class="skill-chip">CSS3</span
+              ><span class="skill-chip">JavaScript</span
+              ><span class="skill-chip">Vue</span
+              ><span class="skill-chip">Responsive</span
+              ><span class="skill-chip">Flexbox</span
+              ><span class="skill-chip">Grid</span>
             </div>
           </div>
-
-          <!-- Backend -->
           <div class="skill-card">
             <div class="skill-card-header">
-              <span class="skill-card-num">02</span>
-              <span class="skill-card-title">Backend</span>
+              <span class="skill-card-num">02</span
+              ><span class="skill-card-title">Backend</span>
             </div>
             <p class="skill-card-desc">
               Routing · three-layer architecture · CRUD · REST design
             </p>
             <div class="skill-card-chips">
-              <span class="skill-chip">Node.js</span>
-              <span class="skill-chip">Express</span>
-              <span class="skill-chip">REST API</span>
-              <span class="skill-chip">JWT</span>
-              <span class="skill-chip">Middleware</span>
+              <span class="skill-chip">Node.js</span
+              ><span class="skill-chip">Express</span
+              ><span class="skill-chip">REST API</span
+              ><span class="skill-chip">JWT</span
+              ><span class="skill-chip">Middleware</span>
             </div>
           </div>
-
-          <!-- Database -->
           <div class="skill-card">
             <div class="skill-card-header">
-              <span class="skill-card-num">03</span>
-              <span class="skill-card-title">Database</span>
+              <span class="skill-card-num">03</span
+              ><span class="skill-card-title">Database</span>
             </div>
             <p class="skill-card-desc">
               Foreign keys · 1NF–3NF · junction tables · relational models
             </p>
             <div class="skill-card-chips">
-              <span class="skill-chip">MySQL</span>
-              <span class="skill-chip">SQLite</span>
-              <span class="skill-chip">Schema design</span>
-              <span class="skill-chip">Normalization</span>
+              <span class="skill-chip">MySQL</span
+              ><span class="skill-chip">SQLite</span
+              ><span class="skill-chip">Schema design</span
+              ><span class="skill-chip">Normalization</span>
             </div>
           </div>
-
-          <!-- Languages -->
           <div class="skill-card">
             <div class="skill-card-header">
-              <span class="skill-card-num">04</span>
-              <span class="skill-card-title">Languages</span>
+              <span class="skill-card-num">04</span
+              ><span class="skill-card-title">Languages</span>
             </div>
             <p class="skill-card-desc">
               OOP · Swing · standard library · file I/O
             </p>
             <div class="skill-card-chips">
-              <span class="skill-chip">Python</span>
-              <span class="skill-chip">Java</span>
-              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">Python</span
+              ><span class="skill-chip">Java</span
+              ><span class="skill-chip">JavaScript</span>
             </div>
           </div>
-
-          <!-- Tools -->
           <div class="skill-card">
             <div class="skill-card-header">
-              <span class="skill-card-num">05</span>
-              <span class="skill-card-title">Tools</span>
+              <span class="skill-card-num">05</span
+              ><span class="skill-card-title">Tools</span>
             </div>
             <p class="skill-card-desc">
               Version control · containers · design · data visualization
             </p>
             <div class="skill-card-chips">
-              <span class="skill-chip">Git</span>
-              <span class="skill-chip">GitHub</span>
-              <span class="skill-chip">VS Code</span>
-              <span class="skill-chip">Docker</span>
-              <span class="skill-chip">Figma</span>
-              <span class="skill-chip">Power BI</span>
+              <span class="skill-chip">Git</span
+              ><span class="skill-chip">GitHub</span
+              ><span class="skill-chip">VS Code</span
+              ><span class="skill-chip">Docker</span
+              ><span class="skill-chip">Figma</span
+              ><span class="skill-chip">Power BI</span>
             </div>
           </div>
         </div>
-
         <div class="skills-summary reveal delay-2">
           <span class="skills-total">24 skills</span> across 5 categories ·
           updated 2026
         </div>
       </section>
 
-      <!-- ════════════════════════════════════════════
-           CONTACT — sezione 005
-      ════════════════════════════════════════════ -->
+      <!-- CONTACT -->
       <section id="contact" aria-label="Contact">
         <div class="section-header">
           <span class="section-index">005 — Contact</span>
           <div class="section-line"></div>
         </div>
-
         <div class="contact-layout">
           <div class="contact-left reveal">
             <h2 class="contact-title">
-              Let's
-              <span class="contact-accent">build</span>
-              something.
+              Let's <span class="contact-accent">build</span> something.
             </h2>
             <p class="contact-intro">
               Available for internships, collaborations, or just a chat about
               code, tennis, or how things work.
             </p>
             <div class="contact-status">
-              <span class="status-dot"></span>
-              <span
-                >Currently open to opportunities · Internship from May
+              <span class="status-dot"></span
+              ><span
+                >Currently open to opportunities · Internship from June
                 2026</span
               >
             </div>
           </div>
-
           <div class="contact-right reveal delay-1">
             <span class="contact-right-label">Get in touch</span>
-
-            <a
-              href="mailto:andrespelizzer@gmail.com"
-              class="contact-link"
-              aria-label="Send email to Andres"
+            <a href="mailto:pelizzerandres@gmail.com" class="contact-link"
+              ><span class="link-key">Email</span
+              ><span class="link-val">pelizzerandres@gmail.com</span></a
             >
-              <span class="link-key">Email</span>
-              <span class="link-val">andrespelizzer@gmail.com</span>
-              <span class="link-arrow">→</span>
-            </a>
             <a
-              href="https://github.com/andrespelizzer-lang"
+              href="https://github.com/andres-pelizzer"
               class="contact-link"
               target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Andres on GitHub"
+              ><span class="link-key">GitHub</span
+              ><span class="link-val">andres-pelizzer</span></a
             >
-              <span class="link-key">GitHub</span>
-              <span class="link-val">@andrespelizzer-lang</span>
-              <span class="link-arrow">→</span>
-            </a>
             <a
-              href="https://linkedin.com/in/andres-pelizzer"
+              href="https://www.linkedin.com/in/andres-pelizzer-094910406/"
               class="contact-link"
               target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Andres on LinkedIn"
+              ><span class="link-key">LinkedIn</span
+              ><span class="link-val">in/andres-pelizzer</span></a
             >
-              <span class="link-key">LinkedIn</span>
-              <span class="link-val">in/andres-pelizzer</span>
-              <span class="link-arrow">→</span>
-            </a>
+            <a
+              href="cv-andres-pelizzer.pdf"
+              class="contact-link"
+              target="_blank"
+              ><span class="link-key">CV</span
+              ><span class="link-val">Download PDF ↓</span></a
+            >
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ════════════════════════════════════════════
-         FOOTER
-    ════════════════════════════════════════════ -->
     <footer class="site-footer">
       <div class="footer-line"></div>
       <div class="footer-content">
         <div class="footer-left">
-          <img src="logo.png" alt="AP" style="height: 18px; width: auto" />
-          <span class="footer-text">Andres Pelizzer · 2026</span>
+          <img src="logo.png" alt="AP" style="height: 18px; width: auto" /><span
+            class="footer-text"
+            >Andres Pelizzer · 2026</span
+          >
         </div>
         <div class="footer-right">
           <span class="footer-text">Treviso, IT</span>
         </div>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>

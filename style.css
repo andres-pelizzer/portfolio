@@ -1289,6 +1289,62 @@ section {
   min-width: 0;
 }
 
+/* BOTTOM SHEET — tooltip mobile */
+.bottom-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 8000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.bottom-sheet-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  border-top: 1px solid var(--accent);
+  border-radius: 16px 16px 0 0;
+  padding: 1rem 1.5rem 2rem;
+  z-index: 8001;
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.bottom-sheet.active {
+  transform: translateY(0);
+}
+.bs-handle {
+  width: 36px;
+  height: 4px;
+  background: var(--muted);
+  border-radius: 2px;
+  margin: 0 auto 1rem;
+}
+.bs-title {
+  font-family: "Syne", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+.bs-desc {
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text);
+  letter-spacing: 0.03em;
+}
+
 /* FOOTER */
 .site-footer {
   max-width: var(--max-w);
@@ -1378,7 +1434,13 @@ section {
     grid-template-columns: 1fr;
     gap: 0.8rem;
   }
-  /* tooltip: JS gestisce il click su tutti i dispositivi */
+  /* tooltip: bottom sheet gestisce tutto su mobile, nascondi hover */
+  .key-word .tip {
+    display: none;
+  }
+  .key-word:hover .tip {
+    display: none;
+  }
   /* projects: stack single column on tablet */
   .proj {
     grid-template-columns: 50px 1fr;

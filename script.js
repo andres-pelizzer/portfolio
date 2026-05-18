@@ -143,91 +143,55 @@ const observer = new IntersectionObserver(
 );
 revealElements.forEach((el) => observer.observe(el));
 
-/* 6b. TOOLTIP CLICK — solo su schermi piccoli (≤800px).
-   Su desktop il hover CSS funziona da solo. */
+/* 6b. BOTTOM SHEET — tooltip mobile/tablet.
+   Su schermi ≤800px, click su parola gialla → bottom sheet dal basso.
+   Su desktop (>800px) il CSS hover funziona da solo. */
 (function () {
-  var allKeyWords = document.querySelectorAll(".key-word");
-  var openTipEl = null;
+  var sheet = document.getElementById("bottomSheet");
+  var overlay = document.getElementById("bsOverlay");
+  var bsTitle = document.getElementById("bsTitle");
+  var bsDesc = document.getElementById("bsDesc");
+  if (!sheet || !overlay) return;
 
-  function hideActiveTip() {
-    if (openTipEl) {
-      openTipEl.style.cssText = "";
-      openTipEl = null;
-    }
+  function openSheet(title, desc) {
+    bsTitle.textContent = title;
+    bsDesc.textContent = desc;
+    sheet.classList.add("active");
+    overlay.classList.add("active");
   }
 
-  function handleClick(e) {
-    /* solo su schermi piccoli */
-    if (window.innerWidth > 800) return;
-
-    e.preventDefault();
-    e.stopPropagation();
-
-    var kw = e.currentTarget;
-    var tip = kw.querySelector(".tip");
-    if (!tip) return;
-
-    if (openTipEl === tip) {
-      hideActiveTip();
-      return;
-    }
-
-    hideActiveTip();
-
-    var rect = kw.getBoundingClientRect();
-    var tipW = Math.min(220, window.innerWidth - 32);
-
-    tip.style.position = "fixed";
-    tip.style.width = tipW + "px";
-    tip.style.opacity = "1";
-    tip.style.pointerEvents = "auto";
-    tip.style.transform = "none";
-    tip.style.zIndex = "9000";
-    tip.style.margin = "0";
-    tip.style.background = "#0d0d0d";
-    tip.style.border = "1px solid #c8ff00";
-    tip.style.borderRadius = "6px";
-    tip.style.padding = "10px 12px";
-    tip.style.fontSize = "11px";
-    tip.style.lineHeight = "1.6";
-
-    /* rendilo visibile per misurare */
-    var tipH = tip.offsetHeight;
-
-    /* posiziona sotto la parola (più naturale su mobile) */
-    var top = rect.bottom + 8;
-
-    /* se esce dal bottom, mettilo sopra */
-    if (top + tipH > window.innerHeight - 16) {
-      top = rect.top - tipH - 8;
-    }
-
-    /* clamp orizzontale */
-    var left = rect.left;
-    if (left + tipW > window.innerWidth - 16) {
-      left = window.innerWidth - tipW - 16;
-    }
-    if (left < 16) left = 16;
-
-    tip.style.top = top + "px";
-    tip.style.left = left + "px";
-    tip.style.bottom = "auto";
-    tip.style.right = "auto";
-
-    openTipEl = tip;
+  function closeSheet() {
+    sheet.classList.remove("active");
+    overlay.classList.remove("active");
   }
 
-  allKeyWords.forEach(function (kw) {
-    kw.addEventListener("click", handleClick);
+  document.querySelectorAll(".key-word").forEach(function (kw) {
+    kw.addEventListener("click", function (e) {
+      if (window.innerWidth > 800) return;
+      e.preventDefault();
+      e.stopPropagation();
+      var tip = kw.querySelector(".tip");
+      if (!tip) return;
+      openSheet(kw.childNodes[0].textContent.trim(), tip.textContent.trim());
+    });
   });
 
-  document.addEventListener("click", function () {
-    hideActiveTip();
-  });
-  window.addEventListener(
-    "scroll",
-    function () {
-      hideActiveTip();
+  overlay.addEventListener("click", closeSheet);
+
+  /* swipe down per chiudere */
+  var startY = 0;
+  sheet.addEventListener(
+    "touchstart",
+    function (e) {
+      startY = e.touches[0].clientY;
+    },
+    { passive: true },
+  );
+  sheet.addEventListener(
+    "touchmove",
+    function (e) {
+      var dy = e.touches[0].clientY - startY;
+      if (dy > 60) closeSheet();
     },
     { passive: true },
   );
